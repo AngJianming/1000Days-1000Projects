@@ -1,15 +1,15 @@
 const myBtn = document.getElementById("myBtn");
-const myPopover = document.getElementById("myPopover");
+const myDropdown = document.getElementById("myDropdown");
 const closeBtn = document.getElementById("closeBtn");
       
       myBtn.addEventListener("click", function() {
 
-        myPopover.classList.add("active");
+        myDropdown.classList.add("active");
 
       });
 
       closeBtn.addEventListener("click", function() {
 
-        myPopover.classList.remove("active");
+        myDropdown.classList.remove("active");
 
       });
