@@ -1,2 +1,2 @@
-# 40 Days of 40 JavaScript(JS) Projects
+# 40 Days of 40 HTML, CSS and JavaScript Projects
 
