@@ -1,0 +1,36 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: repeating-linear-gradient(
+        0deg,
+        #fff 0%,
+        #fff 50%,
+        #000 50%,
+        #000 100%
+    ),
+    repeating-linear-gradient(90deg, #aaa 0%, red 50%, red 50% , #555 100%);
+    background-size: 30px 30px;
+    background-blend-mode: difference;
+    cursor: grab;
+    
+}
+
+span{
+    display: block;
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: #333;
+    pointer-events: none;
+    border-radius: 50%;
+    background: url("https://preview.redd.it/wkew52yw7fr01.jpg?width=1080&crop=smart&auto=webp&s=da22d42a41e176c0042c31d1d20810e6488c081f");
+    background-size: cover;
+    background-attachment: fixed;
+}
