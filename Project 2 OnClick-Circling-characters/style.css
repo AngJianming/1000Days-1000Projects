@@ -1,0 +1,53 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(to right,#04d2f7,#f03efa);
+}
+
+.characters{
+    perspective: 1000px;
+    font-family: cursive;
+    color: ghostwhite;
+}
+
+.characters span{
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    line-height: 0.8;
+    font-size: 10rem;
+}
+
+.characters span.active{
+    animation: circl 2s ease-in-out;
+    transform-origin: bottom left;
+
+}
+
+@keyframes circl {
+    
+    0%{
+        transform: translate(0,0) rotate(180deg)
+    }
+    25%{
+        transform: scale(2) translate(0,-150px)
+    }
+    75%{
+        transform: scale(2,2) translate(50px,130px);
+    }
+    100%{   
+        transform: translate(0,0) rotate(360deg);
+    }
+
+
+}
