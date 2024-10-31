@@ -1,3 +1,3 @@
-# 40 Days of 40 HTML, CSS and JavaScript Projects
+# 1000 Days of 1000 HTML, CSS and JavaScript Projects
 
 
