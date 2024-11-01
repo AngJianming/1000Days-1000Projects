@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 430px;
+            padding: 20px;
+            margin: 250px auto;
+            text-align: center;
+            background-color: #f18585;
+            border-radius: 10px;
+            box-sizing: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2a2a2a;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        input[type="date"] {
+            width: 90%;
+            padding: 10px;
+            margin: 20px 0;
+            border: none;
+            font-size: 18px;
+        }
+
+        input[type="date"]:focus {
+            outline: none;
+            font-size: 18px;
+        }
+
+        label {
+            font-size: 20px;
+            color: #fff;
+            text-transform: capitalize;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: yellowgreen;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 400;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        .box {
+            padding: 10px;
+            background-color: #2a2a2a;
+            color: #fff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Age Calculator</h1>
+        <label for="dob">Enter your date of birth</label>
+        <input type="date" id="dob" />
+        <button id="calculateAge">Calculate Age</button>
+        <div id="result"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#calculateAge").click(function () {
+                var dob = $("#dob").val();
+                var dobDate = new Date(dob);
+                var now = new Date();
+
+                var ageYears = now.getFullYear() - dobDate.getFullYear();
+                var ageMonths = now.getMonth() - dobDate.getMonth();
+                var ageDays = now.getDate() - dobDate.getDate();
+
+                if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
+                    ageYears--;
+                    ageMonths += 12;
+                }
+
+                if (ageDays < 0) {
+                    var prevMonth = new Date(
+                        now.getFullYear(),
+                        now.getMonth() - 1,
+                        dobDate.getDate()
+                    );
+                    ageDays = Math.floor((now - prevMonth) / (1000 * 60 * 60 * 24));
+                }
+                $("#result").html(
+                    "<div class='box'>Your age is " +
+                    ageYears +
+                    " years, " +
+                    ageMonths +
+                    " months, and " +
+                    ageDays +
+                    " days.</div>"
+                );
+            });
+        });
+    </script>
+</body>
+
+</html>
