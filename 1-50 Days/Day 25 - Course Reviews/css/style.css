@@ -1,0 +1,80 @@
+*{
+    background-color: rgb(227, 235, 241);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    width: 100%;
+    height: 100%;
+}
+.title{
+    text-align: center;
+    padding: 19rem;
+    font-size: 3rem;
+    background: none;
+}
+.underline{
+    border: 0.2rem inset rgb(47, 186, 241);
+    margin-top: -3rem;
+    width: 10rem;
+    margin-left: 18rem;
+}
+.review{
+    text-align: center;
+    margin-top:-15rem;
+    width: 42rem;
+    margin-left: 20rem;
+    background-color: white;
+    border-radius: 2rem;
+    padding:5rem ;
+    box-shadow: 0 2px 1px rgba(0, 1, 2, 0.2);
+    margin-bottom: 34rem;
+
+}
+.img-container {
+    background: none;
+    padding-top: 1rem;
+}
+#person-img{
+    border-radius: 50%;
+    width: 12rem;
+}
+#author{
+    font-size: 4rem;
+    background: none;
+    margin-top: -0.2rem;
+}
+#job{
+    background: none;
+    font-size: 2rem;
+    color: blue;
+    margin-top: -5rem;
+}
+#info{
+    background: none;
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+
+}
+.button-container{
+    background: none;
+    padding-bottom: 1rem;
+}
+.prev-btn{
+    color: black;
+    border: 0.2rem solid black;
+    width: 11rem;
+    border-radius: 1.2rem;
+    height: 4rem;
+    font-size: 2rem;
+
+}
+.next-btn{
+    color: black;
+    border: 0.2rem solid black;
+    width: 11rem;
+    border-radius: 1.2rem;
+    height: 4rem;
+    font-size: 2rem;
+
+}
