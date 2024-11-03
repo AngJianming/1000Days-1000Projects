@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1990's Calculator</title>
+    <style>
+        #main {
+            width: 276px;
+            margin: 50px auto;
+            border: 2px solid #000;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            height: 40px;
+            text-align: right;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        input[type="button"] {
+            width: 48px;
+            height: 48px;
+            margin: 2px;
+            font-size: 18px;
+            border: none;
+            background-color: #dcdcdc;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #c0c0c0;
+        }
+
+        input[type="addbutton"] {
+            width: 43px;
+            height: 48px;
+            margin: 2px;
+            font-size: 18px;
+            border: none;
+            background-color: #dcdcdc;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        input[type="addbutton"]:hover {
+            background-color: #c0c0c0;
+        }
+
+        input[type="ebutton"] {
+            width: 43px;
+            height: 48px;
+            margin: 2px;
+            font-size: 18px;
+            border: none;
+            background-color: #dcdcdc;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        input[type="ebutton"]:hover {
+            background-color: #c0c0c0;
+        }
+
+        .operator {
+            background-color: #ffa500;
+        }
+
+        .operator:hover {
+            background-color: #ff8c00;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <form name="cal">
+            <input type="text" name="xxx" readonly><br>
+            <input type="button" value="%" onclick="insert('%')">
+            <input type="button" value="CE" onclick="clearEntry()">
+            <input type="button" value="C" onclick="clearAll()">
+            <input type="button" value="AC" onclick="powerOff()">
+            <input type="button" value="⌫" onclick="backspace()"><br>
+            <input type="button" value="1" onclick="insert('1')">
+            <input type="button" value="2" onclick="insert('2')">
+            <input type="button" value="3" onclick="insert('3')">
+            <input type="button" value="÷" onclick="insert('/')" class="operator">
+            <input type="button" value="√" onclick="squareRoot('√')"><br>
+            <input type="button" value="4" onclick="insert('4')">
+            <input type="button" value="5" onclick="insert('5')">
+            <input type="button" value="6" onclick="insert('6')">
+            <input type="button" value="×" onclick="insert('*')" class="operator">
+            <input type="button" value="^" onclick="insert('^')"><br>
+            <input type="button" value="7" onclick="insert('7')">
+            <input type="button" value="8" onclick="insert('8')">
+            <input type="button" value="9" onclick="insert('9')">
+            <input type="addbutton" value="+" onclick="insert('+')" class="operator">
+            <input type="button" value="−" onclick="insert('-')" class="operator"><br>
+            <input type="button" value="0" onclick="insert('0')">
+            <input type="button" value="00" onclick="insert('00')">
+            <input type="button" value="." onclick="insert('.')">
+            <input type="ebutton" value="=" onclick="calculate()" class="operator">
+        </form>
+    </div>
+    <script>
+        function insert(value) {
+            document.cal.xxx.value += value;
+        }
+
+        function clearEntry() {
+            document.cal.xxx.value = '';
+        }
+
+        function clearAll() {
+            document.cal.xxx.value = '';
+        }
+
+        function powerOff() {
+            document.cal.xxx.value = 'OFF';
+            setTimeout(() => {
+                document.cal.xxx.value = '';
+            }, 1000);
+        }
+
+        function backspace() {
+            document.cal.xxx.value = document.cal.xxx.value.slice(0, -1);
+        }
+
+        function calculate() {
+            try {
+                let expression = document.cal.xxx.value.replace(/÷/g, '/').replace(/×/g, '*');
+                if (expression.includes('^')) {
+                    expression = expression.replace(/\^/g, '**');
+                }
+                document.cal.xxx.value = eval(expression);
+            } catch (error) {
+                document.cal.xxx.value = 'Error';
+                setTimeout(() => {
+                    document.cal.xxx.value = ''; // setTimeout clears the 'Error' message after 2 seconds which is 2000 miliseconds
+                }, 2000);
+            }
+        }
+
+
+        function squareRoot() {
+            try {
+                document.cal.xxx.value = Math.sqrt(eval(document.cal.xxx.value));
+            } catch (error) {
+                document.cal.xxx.value = 'Error';
+                setTimeout(() => {
+                    document.cal.xxx.value = '';
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+
+</html>
