@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Scroll back to Top Button</title>
+	<style>
+		/* Smooth scrolling */
+		body, html {
+			scroll-behavior: smooth;
+			margin: 0;
+			padding: 0;
+		}
+
+		/* Scroll Top Button Styling */
+		#Button {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			width: 50px;
+			display: none;
+			cursor: pointer;
+		}
+
+		#Button img {
+			width: 100%;
+			border-radius: 50%; /* Optional: makes the button round */
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Placeholder content for scrolling -->
+	<img src="https://previews.123rf.com/images/khz/khz0801/khz080100099/2460442-old-scroll-background-for-your-messages-and-designs-with-ornaments.jpg" style="height: 10000px; width: 100%;">
+
+	<!-- Scroll to Top Button -->
+	<a href="#top" id="Button">
+		<img src="https://pbs.twimg.com/profile_images/378800000109924862/605a6c7756beee14fb29dfc75432d2e5_400x400.png" alt="Back to Top">
+	</a>
+
+	<script>
+		// Get the button element
+		var mybutton = document.getElementById("Button");
+
+		// Show the button when scrolled down 100px from the top
+		window.onscroll = function() {
+			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		};
+	</script>
+
+</body>
+
+</html>
