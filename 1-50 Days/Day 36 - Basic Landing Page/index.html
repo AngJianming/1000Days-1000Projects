@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS anime</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- header -->
+    <header id="home">
+        <!-- navbar -->
+        <nav id="nav">
+            <div class="nav-center">
+                <!-- nav header -->
+                <div class="nav-header">
+                    <img src="vid.mp4" alt="logo" class="logo" />
+                    <button class="nav-toggle">
+                        menu
+                    </button>
+                </div>
+                <!-- links -->
+                <div class="links-container">
+                    <ul class="links show">
+                        <li>
+                            <a href="#home" class="scroll-link">home</a>
+                        </li>
+                        <li>
+                            <i class="divider">
+                                <bold>||</bold>
+                            </i>
+                        </li>
+                        <li>
+                            <a href="#projects" class="scroll-link">projects</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- banner -->
+        <div class="banner">
+            <div class="container">
+                <h1>Basic Backbone Struture Landingpage</h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Atque, fuga? Pariatur quam et quasi eaque similique.
+                    Lorem, ipsum dolor.
+                </p>
+                <a href="#projects" class="roll">
+                    let's Roll
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- about -->
+    <section id="projects" class="section">
+        <div class="title">
+            <h2>css animation <span>projects</span></h2>
+            <div class="group">
+                <div class="project-frame">
+
+                </div>
+                <div class="project-frame">
+
+                </div>
+                <div class="project-frame">
+
+                </div>
+                <div class="project-frame">
+
+                </div>
+                <div class="project-frame">
+
+                </div>
+                <div class="project-frame">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="section">
+        <p>
+            copyright &copy; codeman_eazy
+            <span id="date">
+                2020
+            </span>
+            .all rights reserved
+        </p>
+        <p>(+234) 708-5659-633<br>eazystickz@nuno.com</p>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click',
+            () => document.querySelector('.links').classList.toggle('show'));
+    </script>
+</body>
+
+</html>
