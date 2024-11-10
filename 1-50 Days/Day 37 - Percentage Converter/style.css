@@ -1,0 +1,81 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient(to right, #e555e0,#499950);
+}
+
+.card{
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 80%;
+    text-align: center;
+}
+
+.percentage-container{
+    margin-bottom: 10px;
+}
+
+h1{
+    color: #333;
+    text-decoration: underline;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+input{
+    margin-bottom: 20px;
+    width: calc(100% - 20px);
+    height: 30px;
+    margin-top: 10px;
+    appearance: none;
+    border: 5px solid honeydew;
+    border-radius: 15px;
+    background:linear-gradient(to right,#e0e0e0,#4caf50);
+    outline: none;
+    padding: 10px;
+    color: #333;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+input::-webkit-slider-thumb{
+    appearance: none;
+    width: 45px;
+    height: 45px;
+    border: 2px solid honeydew;
+    border-radius: 50%;
+    background: #999f50;
+    cursor: pointer;
+}
+
+#percentageValue{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+#result{
+    margin-top: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+button{
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: #45a049;
+}
