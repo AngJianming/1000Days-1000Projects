@@ -80,9 +80,9 @@ To run a project locally:
     ```bash
     cd 1000Days-1000Projects/901-1000 Days
     ```
-3. Open the HTML file in your browser or use live-server.
+3. Open the HTML file in your browser or use live-server or download live preview extension in vs code.
 
-Some projects may require additional packages or dependencies, which will be listed in the respective project’s README file.
+Some projects may require additional packages or dependencies, which will be listed in the respective project file.
 
 ## Contributing
 Contributions are welcome! If you have a JavaScript project idea or would like to improve existing projects, please open a pull request or create an issue.
