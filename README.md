@@ -82,6 +82,8 @@ To run a project locally:
     ```
 3. Open the HTML file in your browser or use live-server or download live preview extension in vs code.
 
+   ![gif](https://i.sstatic.net/gznhM.gif) ![img live preview](https://codingcampus.net/wp-content/uploads/2022/06/How-to-Preview-your-Code-in-Visual-Studio-Code.png)
+
 Some projects may require additional packages or dependencies, which will be listed in the respective project file.
 
 ## Contributing
