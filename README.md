@@ -41,7 +41,7 @@ Each day, a new folder will be added to this repository containing:
 2. A brief description of the project.
 3. Instructions to run the project.
 
-You can check daily progress and completed projects in the [Projects](./1000Days-1000Projects) directory.
+You can check daily progress and completed projects in the project files directory.
 
 ## Installation & Usage
 To run a project locally:
