@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Validation requirements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="#" method="post" id="form" class="form" onsubmit="return Validation()">
+        <h1>Sign up</h1>
+        <div class="input-group">
+            <input type="text" id="userName" placeholder="User Name" >
+        </div>
+        <div class="input-group">
+            <input type="email" id="userEmail" name="emai" placeholder="Email">
+        </div>
+        <div class="input-group">
+            <input type="number" id="userNumber" name="number" placeholder="Phone">
+        </div>
+        <input type="submit" id="submit" value="Submit">
+        <div class="display_data"></div>
+    </form>
+<script src="main.js"></script>
+</body>
+</html>

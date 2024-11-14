@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+form {
+    width: 40%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 50%) !important;
+    -webkit-transform: translate(-50%, -50%) !important;
+    -moz-transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important;
+    -o-transform: translate(-50%, -50%) !important;
+    background-color: rgb(128, 106, 255);
+    padding: 2rem 1rem;
+    color: #fff;
+}
+
+.input-group {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.input-group input {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+}
+
+.input-group select {
+    padding-left: 1rem;
+    width: 100%;
+    height: 2rem;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.input-group select>option {
+    height: 1.3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: rgb(85, 85, 85);
+}
+
+form input[type="submit"] {
+    padding: 0.5rem;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    font-size: 1.2rem;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    background-color: rgb(51, 202, 144);
+    color: #fff;
+}
+
+form h1 {
+    text-align: center;
+}
