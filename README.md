@@ -41,7 +41,7 @@ Each day, a new folder will be added to this repository containing:
 2. A brief description of the project.
 3. Instructions to run the project.
 
-You can check daily progress and completed projects in the [Projects](./Projects) directory.
+You can check daily progress and completed projects in the [Projects](./1000Days-1000Projects) directory.
 
 ## Installation & Usage
 To run a project locally:
@@ -51,7 +51,34 @@ To run a project locally:
     ```
 2. Navigate to the project folder:
     ```bash
-    cd 1000Days-1000Projects/Day1-50
+    cd 1000Days-1000Projects/1-100 Days
+    ```
+    ```bash
+    cd 1000Days-1000Projects/101-200 Days
+    ```
+    ```bash
+    cd 1000Days-1000Projects/201-300 Days
+    ```
+    ```bash
+    cd 1000Days-1000Projects/301-400 Days
+    ```
+    ```bash
+    cd 1000Days-1000Projects/401-500 Days
+    ```
+    ```bash
+    cd 1000Days-1000Projects/501-600 Days
+    ```
+    ```bash
+    cd 1000Days-1000Projects/601-700 Days
+    ```
+    ```bash
+    cd 1000Days-1000Projects/701-800 Days
+    ```
+    ```bash
+    cd 1000Days-1000Projects/801-900 Days
+    ```
+    ```bash
+    cd 1000Days-1000Projects/901-1000 Days
     ```
 3. Open the HTML file in your browser or use live-server.
 
