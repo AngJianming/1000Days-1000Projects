@@ -47,11 +47,11 @@ You can check daily progress and completed projects in the [Projects](./Projects
 To run a project locally:
 1. Clone this repository:
     ```bash
-    git clone https://github.com/username/1000-JS-Projects.git
+    git clone https://github.com/AngJianming/1000Days-1000Projects.git
     ```
 2. Navigate to the project folder:
     ```bash
-    cd Projects/Day1
+    cd 1000Days-1000Projects/Day1-50
     ```
 3. Open the HTML file in your browser or use live-server.
 
