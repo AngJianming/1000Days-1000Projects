@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background: linear-gradient(darkcyan, transparent),
+        linear-gradient(-45deg, chocolate, transparent),
+        linear-gradient(45deg, rebeccapurple, transparent);
+    background-blend-mode: multiply;
+}
+
+
+.cursor1 {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    border: 4px solid #111;
+    border-top-color: blue;
+    border-left-color: red;
+    border-right-color: green;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.1s ease;
+}
+
+.cursor2 {
+    position: fixed;
+    background: #111;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.15s ease;
+}
