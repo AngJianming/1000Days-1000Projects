@@ -36,10 +36,10 @@ The projects will cover a variety of topics and complexities, including but not 
 - **Canvas Drawing and Graphics**
 
 ## Daily Progress
-Each day, a new folder will be added to this repository containing:
-1. The project code.
-2. A brief description of the project.
-3. Instructions to run the project.
+Each day, a new Folder in the following current DayXXX-XXX folder will be added to this repository containing:
+1. The project code and file.
+2. Project title.
+3. No of Day.
 
 You can check daily progress and completed projects in the project files directory.
 
