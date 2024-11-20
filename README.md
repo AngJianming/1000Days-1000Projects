@@ -87,7 +87,7 @@ To run a project locally:
 Some projects may require additional packages or dependencies, which will be listed in the respective project file.
 
 ## Contributing
-Contributions are welcome! If you have a JavaScript project idea or would like to improve existing projects, please open a pull request or create an issue.
+Contributions are welcome! If you have a JavaScript project idea or would like to improve existing projects, please first create an issue then only open a pull request.
 
 ## License
 This repository is licensed under the MIT License. See [LICENSE](./LICENSE) for details.
