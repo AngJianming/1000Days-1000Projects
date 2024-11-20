@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #1D1E23,#394240);
+}
+
+h1{
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+h1 span{
+   color: #DDD660; 
+   position: relative;
+}
+
+h1 span::before{
+    content: "";
+    height: 60px;
+    width: 3px;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    background: #f222ED;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+        50%{opacity: 0;}
+}
