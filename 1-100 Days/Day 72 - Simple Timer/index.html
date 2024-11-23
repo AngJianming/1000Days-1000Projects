@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Timer App</title>
+  <!-- Include Tailwind CSS CDN for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Include Font Awesome CDN for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <!-- Custom CSS styles -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+
+  <div class="text-center">
+    <h1 class="text-4xl font-bold mb-8">Simple Timer App</h1>
+
+    <!-- Timer Display -->
+    <div class="progress-ring">
+      <div class="progress-circle"></div>
+      <div id="timer" class="timer-text">
+        <span id="timer-display">00:00:01:00:000</span>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls mt-8">
+      <button id="play" class="play-btn">
+        <i class="fas fa-play"></i>
+      </button>
+      <button id="reset" class="reset-btn">
+        <i class="fas fa-redo"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Include your script.js file -->
+  <script src="script.js"></script>
+</body>
+</html>
