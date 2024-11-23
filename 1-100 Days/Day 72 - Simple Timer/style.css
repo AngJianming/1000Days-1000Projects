@@ -1,0 +1,81 @@
+:root {
+  --degrees: 0deg;
+}
+
+/* Timer circle styles */
+.progress-ring {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.progress-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid #e5e7eb; /* Tailwind gray-200 */
+  border-top-color: #3b82f6; /* Tailwind blue-500 */
+  transform: rotate(var(--degrees));
+  transition: transform 1s linear;
+}
+
+/* Timer text styles */
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Input field styles */
+.timer-input {
+  font-size: 1.5rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+}
+
+/* Button styles */
+.play-btn, .reset-btn {
+  background-color: #3b82f6; /* Tailwind blue-500 */
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.play-btn.bg-green-500 {
+  background-color: #10b981; /* Tailwind green-500 */
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Style the timer input field */
+.timer-input {
+  font-size: 2rem;
+  text-align: center;
+  border: 2px solid #3b82f6; /* Tailwind blue-500 */
+  border-radius: 5px;
+  padding: 3px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.timer-input:focus {
+  outline: none;
+  border-color: #2563eb; /* Tailwind blue-600 */
+}
