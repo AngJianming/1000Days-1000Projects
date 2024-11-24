@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Smooth Clock Minimalist</title>
+</head>
+<body>
+  <!-- Inspired by this dribbble shot https://dribbble.com/shots/5958443-Alarm-clock -->
+
+  <button class="toggle">Dark mode</button>
+
+  <div class="clock-container">
+    <div class="clock">
+      <div class="numerals">
+        <div class="numeral" style="transform: rotate(0deg) translate(0, -180px) rotate(0deg);">XII</div>
+        <div class="numeral" style="transform: rotate(30deg) translate(0, -180px) rotate(-30deg);">I</div>
+        <div class="numeral" style="transform: rotate(60deg) translate(0, -180px) rotate(-60deg);">II</div>
+        <div class="numeral" style="transform: rotate(90deg) translate(0, -180px) rotate(-90deg);">III</div>
+        <div class="numeral" style="transform: rotate(120deg) translate(0, -180px) rotate(-120deg);">IV</div>
+        <div class="numeral" style="transform: rotate(150deg) translate(0, -180px) rotate(-150deg);">V</div>
+        <div class="numeral" style="transform: rotate(180deg) translate(0, -180px) rotate(-180deg);">VI</div>
+        <div class="numeral" style="transform: rotate(210deg) translate(0, -180px) rotate(-210deg);">VII</div>
+        <div class="numeral" style="transform: rotate(240deg) translate(0, -180px) rotate(-240deg);">VIII</div>
+        <div class="numeral" style="transform: rotate(270deg) translate(0, -180px) rotate(-270deg);">IX</div>
+        <div class="numeral" style="transform: rotate(300deg) translate(0, -180px) rotate(-300deg);">X</div>
+        <div class="numeral" style="transform: rotate(330deg) translate(0, -180px) rotate(-330deg);">XI</div>
+      </div>
+      <div class="needle hour"></div>
+      <div class="needle minute"></div>
+      <div class="needle second"></div>
+      <div class="center-point"></div>
+    </div>
+
+    <div class="time"></div>
+    <div class="date"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
