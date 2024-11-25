@@ -65,6 +65,30 @@ body {
   border-radius: 5px;
 }
 
+.btn {
+  background-color: #eaeaea;
+  display: inline-block;
+  padding: 10px;
+  line-height: 20px;
+  max-width: 400px;
+  color: #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.btn::after {
+  background-color: #8b8a8a;
+  display: inline-block;
+  padding: 10px;
+  line-height: 20px;
+  max-width: 400px;
+  color: #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   .code-container {
     flex-wrap: wrap;
