@@ -1,14 +1,41 @@
-const codes = document.querySelectorAll('.code')
+const emailSection = document.getElementById('email-section');
+const otpSection = document.getElementById('otp-section');
+const messageDiv = document.getElementById('message');
 
-codes[0].focus()
-
-codes.forEach((code, idx) => {
-    code.addEventListener('keydown', (e) => {
-        if(e.key >= 0 && e.key <=9) {
-            codes[idx].value = ''
-            setTimeout(() => codes[idx + 1].focus(), 10)
-        } else if(e.key === 'Backspace') {
-            setTimeout(() => codes[idx - 1].focus(), 10)
-        }
+document.getElementById('send-otp-button').addEventListener('click', () => {
+    const email = document.getElementById('email').value;
+    fetch('http://localhost:3000/send-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
     })
-})
+        .then(response => response.json())
+        .then(data => {
+            emailSection.classList.add('hidden');
+            otpSection.classList.remove('hidden');
+            messageDiv.innerText = data.message;
+        })
+        .catch(error => {
+            messageDiv.innerText = 'Error sending OTP';
+            console.error(error);
+        });
+});
+
+document.getElementById('verify-otp-button').addEventListener('click', () => {
+    const email = document.getElementById('email').value;
+    const otp = document.getElementById('otp').value;
+    fetch('http://localhost:3000/verify-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, otp }),
+    })
+        .then(response => response.json())
+        .then(data => {
+            messageDiv.innerText = data.message;
+            otpSection.classList.add('hidden');
+        })
+        .catch(error => {
+            messageDiv.innerText = 'Invalid OTP';
+            console.error(error);
+        });
+});
