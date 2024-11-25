@@ -1,5 +1,5 @@
 # 1000 Days of 1000 JavaScript(JS) Projects
-
+        
 Welcome to the **1000 Days of 1000 JavaScript Projects** repository! This is an ambitious journey to complete 1000 JavaScript projects in 1000 days, where each day brings a new project focused on enhancing JavaScript skills, creativity, and problem-solving abilities.<br>
 
 This repo consists of Web development projects using languages like HTML, CSS and JS.
