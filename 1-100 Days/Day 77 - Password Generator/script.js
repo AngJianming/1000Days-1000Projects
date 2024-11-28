@@ -16,10 +16,10 @@ const randomFunc = {
 
 clipboardEl.addEventListener('click', () => {
     const password = resultEl.innerText;
-  if (!password) {
-    return;
-  }
-  navigator.clipboard.writeText(password);
+    if (!password) {
+        return;
+    }
+    navigator.clipboard.writeText(password);
     alert('Password copied to clipboard!')
 })
 
@@ -36,13 +36,13 @@ generateEl.addEventListener('click', () => {
 function generatePassword(lower, upper, number, symbol, length) {
     let generatedPassword = ''
     const typesCount = lower + upper + number + symbol
-    const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0])
-    
-    if(typesCount === 0) {
+    const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter(item => Object.values(item)[0])
+
+    if (typesCount === 0) {
         return ''
     }
 
-    for(let i = 0; i < length; i += typesCount) {
+    for (let i = 0; i < length; i += typesCount) {
         typesArr.forEach(type => {
             const funcName = Object.keys(type)[0]
             generatedPassword += randomFunc[funcName]()
