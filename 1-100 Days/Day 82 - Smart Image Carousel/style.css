@@ -1,0 +1,64 @@
+/* Reset default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Swiper Container */
+.swiper-container {
+  width: 100%;
+  max-width: 800px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: auto;
+}
+
+/* Swiper Slide */
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px; /* Adjust slide width */
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Adjust Swiper's coverflow effect */
+.swiper-slide {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+}
+
+/* Optional: Adjust navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #333; /* Change the color */
+}
+
+.swiper-pagination-bullet {
+  background: rgba(0, 0, 0, 0.5); /* Change the default color */
+}
+
+.swiper-pagination-bullet-active {
+  background: #000; /* Change the active bullet color */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .swiper-slide {
+    width: 200px; /* Adjust slide width on small screens */
+  }
+}
