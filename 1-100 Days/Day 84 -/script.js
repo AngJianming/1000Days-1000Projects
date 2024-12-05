@@ -1,3 +1,5 @@
+// js
+
 const selectors = {
     boardContainer: document.querySelector('.board-container'),
     board: document.querySelector('.board'),
@@ -61,7 +63,7 @@ const generateGame = () => {
                     <div class="card-back">${item}</div>
                 </div>
             `).join('')}
-       </div>
+        </div>
     `
     
     const parser = new DOMParser().parseFromString(cards, 'text/html')
