@@ -20,7 +20,7 @@ const shuffle = array => {
     const clonedArray = [...array]
 
     for (let i = clonedArray.length - 1; i > 0; i--) {
-        const ramdomIndex = Math.floor(Math.random() * (i + 1))
+        const randomIndex = Math.floor(Math.random() * (i + 1))
         const original = clonedArray[i]
 
         clonedArray[i] = clonedArray[randomIndex]
@@ -30,15 +30,120 @@ const shuffle = array => {
     return clonedArray
 }
 
-const pickRamdom = (array, items) => {
+const pickRandom = (array, items) => {
     const clonedArray = [...array]
-    const ramdomPicks = []
+    const randomPicks = []
 
     for (let i = 0; i < items; i++) {
         const randomIndex = Math.floor(Math.ramdom() * clonedArray.length)
 
-        ramdomPicks.push(clonedArray[ramdomIndex])
-        clonedArray.splice(ramdomIndex, 1)
+        randomPicks.push(clonedArray[randomIndex])
+        clonedArray.splice(randomIndex, 1)
         
     }
+
+    return randomPicks
 }
+
+const generateGame = () => {
+    const dimensions = selectors.board.getAttribute('data-dimension')
+
+    if (dimension % 2 !== 0) {
+        throw new Error("The dimension of the board must be an even number.")
+    }
+
+    const emojis = ['🥔', '🍒', '🥑', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍']
+    const picks = pickRandom(emoji, (dimensions * dimensions) / 2)
+    const items = suffle([...picks, ...picks])
+    const cards = `
+    <div class="board" style="grid-template-columns: repeat(${dimensions}, auto)">
+        ${items.map(item => `
+            <div class="card">
+                <div class="card-front"></div>
+                <div class="card-back">${item}</div>
+            </div>
+        `).join('')}
+    </div>
+    `
+
+    const parser = new DOMParcer().parseFromString(cards, 'text/html')
+
+    selectors.board.replaceWith(parcer.querySelector('.board'))
+}
+
+const startGame = () => {
+    state.gameStarted = true
+    selectors.start.classList.add('disable')
+
+    state.loop = setInterval(() => {
+        state.totalTime++
+
+        selectors.moves.innterText = `${state.totalFlips} moves`
+        selectors.timer.innterText = `Time: ${state.totalTime} sec`
+    }, 1000)
+
+}
+
+const flipBackCards = () => {
+    document.querySelectorAll('.card:not(.matched)').forEach(card => {
+
+    })
+
+    state.flippedCards = 0
+}
+
+const flipCard = card => {
+    state.flippedCards++
+    state.totalFlips++
+
+    if (!state.gameStarted) {
+        startGame()
+    }
+
+    if (!state.flippedCards <= 2) {
+        card.classList.add('flipped')
+    }
+
+    if (state.flippedCards === 2 ) {
+        const flippedCards = document.querySelectorAll('.flipped:not(.matched)')
+        if (flippedCards[0].innerText === flippedCards[1].innerText) {
+            flippedCards[0].classList.add('matched')
+            flippedCards[1].classList.add('matched')
+        }
+
+        setTimeout(() => {
+            flippedCards()
+        }, 1000)
+    }
+
+    if (!document.querySelectorAll('.card:not(.flipped)').length) {
+        setTimeout(() => {
+            selectors.boardContainer.classList.add('flipped')
+            selectors.win.innerHTML = `
+                <span class = "win-text">
+                    You Won!<br>
+                    with <span class = "highlight">${state.totalFlips}</span> moves<br>
+                    under <span class = "highlight">${state.totalTime}</span> seconds
+                </span>
+            `
+            
+            clearInterval(state.loop)
+        }, 1000)
+    }
+}
+
+const attachEventListener = () => {
+    document.addEventListener('click', event => {
+        const eventTarget = event.target
+        const eventParent = eventTarget.parentElement
+
+        if (eventTarget.className.include('card') && !eventParent.className.includes('flipped')) {
+            flipCard(eventParent)
+        } else if (eventTarget.nodeName === 'BUTTON' && !eventTarget.className.include('disabled')) {
+            startGame()
+        }
+    })
+}
+
+generateGame()
+attachEventListners()
