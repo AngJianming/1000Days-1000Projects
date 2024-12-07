@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Offline Multiplayer 2D Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #222;
+            overflow: hidden;
+        }
+        #health-bars {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .health-bar-container {
+            width: 200px;
+            height: 25px;
+            background: #555;
+            border: 2px solid #000;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .health-bar {
+            height: 100%;
+            width: 200px; /* Initial width corresponding to full health */
+            background: green;
+            transition: width 0.3s, background 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div id="health-bars">
+        <div class="health-bar-container">
+            <div id="health-bar-player1" class="health-bar"></div>
+        </div>
+        <div class="health-bar-container">
+            <div id="health-bar-player2" class="health-bar"></div>
+        </div>
+    </div>
+
+    <!-- Phaser 3 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <!-- Main Game Script -->
+    <script src="main.js"></script>
+</body>
+</html>
