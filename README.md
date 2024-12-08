@@ -36,12 +36,12 @@ The projects will cover a variety of topics and complexities, including but not 
 - **Canvas Drawing and Graphics**
 
 ## Daily Progress
-Each day, a new folder will be added to this repository containing:
-1. The project code.
-2. A brief description of the project.
-3. Instructions to run the project.
+Each day, a new Folder in the following current DayXXX-XXX folder will be added to this repository containing:
+1. The project code and file.
+2. Project title.
+3. No of Day.
 
-You can check daily progress and completed projects in the [Projects](./1000Days-1000Projects) directory.
+You can check daily progress and completed projects in the project files directory.
 
 ## Installation & Usage
 To run a project locally:
@@ -80,12 +80,14 @@ To run a project locally:
     ```bash
     cd 1000Days-1000Projects/901-1000 Days
     ```
-3. Open the HTML file in your browser or use live-server.
+3. Open the HTML file in your browser or use live-server or download live preview extension in vs code.
 
-Some projects may require additional packages or dependencies, which will be listed in the respective project’s README file.
+   ![gif](https://i.sstatic.net/gznhM.gif) ![img live preview](https://codingcampus.net/wp-content/uploads/2022/06/How-to-Preview-your-Code-in-Visual-Studio-Code.png)
+
+Some projects may require additional packages or dependencies, which will be listed in the respective project file.
 
 ## Contributing
-Contributions are welcome! If you have a JavaScript project idea or would like to improve existing projects, please open a pull request or create an issue.
+Contributions are welcome! If you have a JavaScript project idea or would like to improve existing projects, please first create an issue then only open a pull request.
 
 ## License
 This repository is licensed under the MIT License. See [LICENSE](./LICENSE) for details.
