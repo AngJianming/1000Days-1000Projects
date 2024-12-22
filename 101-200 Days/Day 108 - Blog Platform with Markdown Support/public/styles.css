@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    height: 200px;
+    resize: vertical;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.btn.edit {
+    background: #ffc107;
+}
+
+.btn.delete {
+    background: #dc3545;
+}
+
+.posts {
+    list-style: none;
+    padding: 0;
+}
+
+.posts li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.posts li:last-child {
+    border-bottom: none;
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+.delete-form {
+    display: inline;
+}
