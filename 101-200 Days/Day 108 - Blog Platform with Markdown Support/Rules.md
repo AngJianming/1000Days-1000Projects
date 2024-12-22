@@ -1,4 +1,4 @@
-Initialize the Project
+# Initialize the Project
 
 ```bash
 mkdir personal-blog
@@ -14,6 +14,7 @@ npm install ejs
 ```
 
 to Start the server
+
 ```bash
 node app.js
 ```
