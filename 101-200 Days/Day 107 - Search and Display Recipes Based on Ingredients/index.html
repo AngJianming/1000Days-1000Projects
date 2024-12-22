@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Finder</h1>
+        <form id="recipe-form">
+            <input type="text" id="ingredients" placeholder="Enter ingredients (comma separated)" required>
+            <button type="submit">Search</button>
+        </form>
+        <div id="recipes" class="recipes"></div>
+        <div id="error-message" class="error-message hidden"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
