@@ -45,4 +45,4 @@ Is this OK? (yes)
 
 1) ```npm i simple-git``` - Install simple-git, a lightweight interface for running git commands in any node. js application.
 
-1) ```node index.js``` - Lastly, run the index.js source code.
+1) ```node index.js``` - Lastly, run the index.js source code. (Remember to make sure you change your directory the correct file before starting, must be specific)
