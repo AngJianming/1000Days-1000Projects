@@ -4,7 +4,8 @@ const simpleGit = require('simple-git');
 
 const FILE = './data.json';
 
-const DATE = moment().subtract(2,'d').format();
+// date delay (e.g: Friday you want to shedule the message on Saturday is -1, but if you want to revert is just +1 therefore making it Thursday)
+const DATE = moment().subtract(1,'d').format();
 
 const data = {
     date : DATE
