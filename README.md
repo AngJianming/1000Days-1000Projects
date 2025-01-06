@@ -24,6 +24,7 @@ This project is a commitment to learn, explore, and build a wide array of JavaSc
 
 ## Project Categories
 The projects will cover a variety of topics and complexities, including but not limited to:
+- **Basic Calculators, Generators, and Mini games**
 - **DOM Manipulation**
 - **API Integration**
 - **Data Visualization**
