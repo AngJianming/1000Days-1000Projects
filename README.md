@@ -93,7 +93,7 @@ This repository is licensed under the MIT License. See [LICENSE](./LICENSE) for 
 
 ---
 
-Let’s build something amazing every day!
+Let’s build something amazing every day! 😁
 
 
 
