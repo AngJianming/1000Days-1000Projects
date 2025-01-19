@@ -79,7 +79,7 @@ To run a project locally:
     ```bash
     cd 1000Days-1000Projects/901-1000 Days
     ```
-3. Open the HTML file in your browser or use live-server or download live preview extension in vs code.
+3. Open the HTML file in your browser or use `live-server` or download live preview extension in vs code.
 
    ![gif](https://i.sstatic.net/gznhM.gif) ![img live preview](https://codingcampus.net/wp-content/uploads/2022/06/How-to-Preview-your-Code-in-Visual-Studio-Code.png)
 
