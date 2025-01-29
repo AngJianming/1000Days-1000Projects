@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Easy Payment System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="paymentForm">
+        <h2>Payment Details</h2>
+
+        <div class="form-group">
+          <label for="cardName">Cardholder Name</label>
+          <input type="text" id="cardName" placeholder="John Doe" required />
+        </div>
+
+        <div class="form-group">
+          <label for="cardNumber">Card Number</label>
+          <input
+            type="text"
+            id="cardNumber"
+            placeholder="1234 5678 9012 3456"
+            required
+          />
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="cardExpiry">Expiry (MM/YY)</label>
+            <input type="text" id="cardExpiry" placeholder="08/25" required />
+          </div>
+          <div class="form-group">
+            <label for="cardCVC">CVC</label>
+            <input type="password" id="cardCVC" placeholder="123" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Pay Now</button>
+        <div id="message" class="message"></div>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
