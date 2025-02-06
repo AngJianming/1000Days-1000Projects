@@ -2,9 +2,7 @@
 
 Welcome to the **1000 Days of 1000 JavaScript Projects** repository! This is an ambitious journey to complete 1000 JavaScript projects in 1000 days, where each day brings a new project focused on enhancing JavaScript skills, creativity, and problem-solving abilities.<br>
 
-This repo consists some Node.js which is a server side JavaScript engine from chrome that can compile JavaScript into machine code for efficient execution. Not only that, but also frameworks like Next.js, React.js, Vue.js and Angular.js might also be included with some js libraries.
-
-## Table of Contents
+This repo consists some Node.js which is a server side JavaScript engine from chrome that can compile JavaScript into machine code for efficient execution. Not only that, but also frameworks like Next.js, React.js, Vue.js and Angular.js might also be included with some js libraries. Not only that, but also some projects require professional development. Hence, might intergrate TypeScript insted but overall very similar.
 - [Introduction](#introduction)
 - [Project Goals](#project-goals)
 - [Project Categories](#project-categories)
@@ -81,7 +79,7 @@ To run a project locally:
     ```bash
     cd 1000Days-1000Projects/901-1000 Days
     ```
-3. Open the HTML file in your browser or use live-server or download live preview extension in vs code.
+3. Open the HTML file in your browser or use `live-server` or download live preview extension in vs code.
 
    ![gif](https://i.sstatic.net/gznhM.gif) ![img live preview](https://codingcampus.net/wp-content/uploads/2022/06/How-to-Preview-your-Code-in-Visual-Studio-Code.png)
 
@@ -95,7 +93,7 @@ This repository is licensed under the MIT License. See [LICENSE](./LICENSE) for 
 
 ---
 
-Let’s build something amazing every day!
+Let’s build something amazing every day! 😁
 
 
 
