@@ -42,3 +42,22 @@ cardNumber.addEventListener("input", function (e) {
 
 // Rest of your existing code remains unchanged below...
 // [Keep all your existing functions: showMessage, validatePaymentDetails, processPayment, and the form submit handler]
+var stripe = Stripe ( //Stripe Account required
+  "pk_test_iO0OmHJjHiksR0HjyoUOSMNS0017Q3B9xA"
+)
+
+document.getElementById("checkout").addEventListener("click", function () {
+  Stripe.redirectToCheckout({
+    lineItems: [
+      {
+        price: "", // for Price API ID
+        quantity: 1,
+      },
+    ],
+    mode: "subscription",
+    successUrl: "https://www.google.com/",
+    cancleUrl: "https://www.x.com/",
+  }).then(function(result){
+    alert(result)
+  });
+})
