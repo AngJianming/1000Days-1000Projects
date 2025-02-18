@@ -1,0 +1,212 @@
+/* -- Base Variables and Fonts -- */
+:root {
+    --font-family: 'Inter', sans-serif;
+    --background-color: #f0f2f5;
+    --card-background: rgba(255, 255, 255, 0.7);
+    --primary-color: #00bcd4;
+    --secondary-color: #005f73;
+    --text-color: #333333;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme {
+    --background-color: #1a1a1a;
+    --card-background: rgba(30, 30, 30, 0.9);
+    --primary-color: #00e5ff;
+    --secondary-color: #003845;
+    --text-color: #e0e0e0;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* -- Global Reset & Base Styles -- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -- Header Styles -- */
+header {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    padding: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+header button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+header button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* -- Main Layout -- */
+main {
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* -- Card Component -- */
+.card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+}
+
+/* -- Typography & Headings -- */
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* -- Form Styles -- */
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+/* -- Button Styles -- */
+.btn {
+    background: var(--primary-color);
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    width: 100%;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+/* -- Event Action Buttons (Edit, Cancel, Complete) -- */
+.event-actions {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.event-actions button {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.event-actions button.edit {
+    background: #ffb74d;
+    color: #fff;
+}
+
+.event-actions button.cancel {
+    background: #e57373;
+    color: #fff;
+}
+
+.event-actions button.complete {
+    background: #81c784;
+    color: #fff;
+}
+
+/* -- Calendar Styles -- */
+#calendar {
+    margin-top: 1rem;
+}
+
+.calendar-event {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: background 0.3s ease;
+}
+
+body.dark-theme .calendar-event {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.calendar-event.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.calendar-event:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
