@@ -1,99 +1,91 @@
-/* Basic Reset */
+/* Reset some default styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #000;
 }
 
+/* Body styling for centered layout */
 body {
     font-family: Arial, sans-serif;
-    background: #f7f7f7;
+    background-color: #fff;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
+/* Container styling */
 .container {
-    background: #fff;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Header styling */
 h2 {
-    margin-bottom: 20px;
-    font-size: 1.5rem;
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 
+/* Form group styling */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
 label {
     display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
+/* Input styling */
 input[type="text"],
-input[type="number"],
 input[type="password"] {
     width: 100%;
-    padding: 8px;
-    font-size: 1rem;
+    padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    outline: none;
+    font-size: 1rem;
 }
 
-input[type="text"]:focus,
-input[type="number"]:focus,
-input[type="password"]:focus {
-    border-color: #007BFF;
-}
-
+/* Row styling for grouped inputs */
 .row {
     display: flex;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .row .form-group {
     flex: 1;
 }
 
+/* Button styling */
 .btn {
-    display: block;
     width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    font-size: 1rem;
-    text-align: center;
+    padding: 0.75rem;
+    background-color: #007BFF;
+    /* Blue color */
     color: #fff;
-    background: #f2ff00;
     border: none;
     border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
+    margin-top: 1rem;
 }
 
 .btn:hover {
-    background: #0056b3;
+    background-color: #0056b3;
 }
 
+/* Message styling */
 .message {
-    margin-top: 15px;
+    margin-top: 1rem;
     text-align: center;
-    font-weight: bold;
-}
-
-.message.success {
-    color: green;
-}
-
-.message.error {
-    color: red;
+    font-size: 0.9rem;
+    color: #d9534f;
+    /* Optional: red for error messages */
 }
