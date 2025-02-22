@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2048 Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="grid-container">
+            <!-- Dynamically generate 16 grid cells -->
+            <script>
+                for (let i = 0; i < 16; i++) {
+                    document.write('<div class="grid-cell"></div>');
+                }
+            </script>
+        </div>
+        <div class="tile-container">
+            <!-- Tiles will be inserted here dynamically -->
+        </div>
+    </div>
+
+    <!-- Instructions Section -->
+    <div id="instructions-container">
+        <h2>How to Play 2048</h2>
+        <div id="instructions-text">
+            <ul>
+                <li><strong>Objective:</strong> Merge tiles to create a tile with the number 2048.</li><br>
+                <li><strong>Moves:</strong> Use the arrow keys (up, down, left, right) to slide the tiles.</li><br>
+                <li><strong>Merging:</strong> When two tiles with the same number collide, they merge into one tile with
+                    their sum.</li><br>
+                <li><strong>New Tiles:</strong> After each move, a new tile (usually a 2, occasionally a 4) appears in a
+                    random empty cell.</li><br>
+                <li><strong>Game Over:</strong> The game ends when there are no empty cells and no legal moves
+                    remaining.</li><br>
+                <li><strong>Tip:</strong> Plan ahead and avoid cornering high-value tiles.</li><br>
+            </ul>
+        </div>
+        <button id="toggle-instructions">Hide Instructions</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

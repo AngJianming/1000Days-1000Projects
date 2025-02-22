@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #faf8ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: #bbada0;
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Both grid and tile containers use CSS Grid for alignment */
+.grid-container,
+.tile-container {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+.grid-cell {
+    background: rgba(238, 228, 218, 0.35);
+    border-radius: 3px;
+}
+
+.tile {
+    background: #eee4da;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    font-weight: bold;
+    color: #776e65;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Animation keyframes for movement */
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* CSS classes to trigger the animations */
+.move-up {
+    animation: moveUp 0.2s ease;
+}
+
+.move-down {
+    animation: moveDown 0.2s ease;
+}
+
+.move-left {
+    animation: moveLeft 0.2s ease;
+}
+
+.move-right {
+    animation: moveRight 0.2s ease;
+}
+
+/* Styles for the instructions section */
+#instructions-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#instructions-container h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#instructions-text {
+    margin-top: 10px;
+}
+
+#instructions-text ul {
+    padding-left: 20px;
+}
+
+#toggle-instructions {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #bbada0;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#toggle-instructions:hover {
+    background: #daa97b;
+}
