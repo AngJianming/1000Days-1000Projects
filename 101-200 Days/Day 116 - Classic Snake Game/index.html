@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="controls">
+            <button id="restartBtn">Restart</button>
+            <button id="settingsBtn">Settings</button>
+            <div id="score">Score: 0</div>
+        </div>
+    </div>
+
+    <!-- Modal for Game Over / Victory -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage"></p>
+            <div class="modal-buttons">
+                <button id="modalRestart">Restart</button>
+                <button id="modalSettings">Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <h3>Game Settings</h3>
+            <label for="speedInput">Set game speed (ms per tick): </label>
+            <input type="number" id="speedInput" value="150" min="50" step="10">
+            <div class="settings-buttons">
+                <button id="settingsSave">Save</button>
+                <button id="settingsCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
