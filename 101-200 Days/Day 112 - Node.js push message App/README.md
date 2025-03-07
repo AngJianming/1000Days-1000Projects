@@ -46,3 +46,13 @@ Is this OK? (yes)
 1) ```npm i simple-git``` - Install simple-git, a lightweight interface for running git commands in any node. js application.
 
 1) ```node index.js``` - Lastly, run the index.js source code. (Remember to make sure you change your directory the correct file before starting, must be specific)
+
+NOTE: Make sure your in the correct directory `cd your-file-directory-name` terminal
+<br>
+
+In this case you need to
+```bash
+cd 1000Days-1000Projects
+cd '101-200 Days'
+cd 'Day 112 - Node.js push message App'
+```
