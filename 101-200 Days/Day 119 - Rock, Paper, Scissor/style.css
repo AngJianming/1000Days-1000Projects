@@ -1,0 +1,288 @@
+/* Global Styles */
+body {
+    margin: 0;
+    background: #000;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Avatars Section */
+.avatars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.avatar {
+    margin: 0 15px;
+    text-align: center;
+}
+
+.avatar .icon {
+    font-size: 50px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.avatar.vs h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/* Animation Wrapper & Moves */
+.animation-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 20px 0;
+}
+
+.move {
+    font-size: 60px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game Buttons */
+.game {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.choice {
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.choice:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+/* Result Text */
+.result p {
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* Animations for Rock Beats Scissors */
+@keyframes rockBeatsScissorsWinner {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rockBeatsScissorsLoser {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-20px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+}
+
+/* Animations for Paper Beats Rock */
+@keyframes paperWrapsRockWinner {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateX(20px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+@keyframes paperWrapsRockLoser {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-20px) rotate(-10deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-20px) rotate(-10deg);
+        opacity: 0;
+    }
+}
+
+/* Animations for Scissors Beats Paper */
+@keyframes scissorsCutPaperWinner {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateX(20px) rotate(15deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+@keyframes scissorsCutPaperLoser {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-20px) rotate(-15deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-20px) rotate(-15deg);
+        opacity: 0;
+    }
+}
+
+/* Animation for Tie */
+@keyframes tieBounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animate-tie .player-move,
+.animate-tie .computer-move {
+    animation: tieBounce 1s forwards;
+}
+
+/* Outcome Animation Classes */
+/* For Rock Beats Scissors */
+.animate-rock-beats-scissors:not(.computer-win) .player-move {
+    animation: rockBeatsScissorsWinner 1s forwards;
+}
+
+.animate-rock-beats-scissors:not(.computer-win) .computer-move {
+    animation: rockBeatsScissorsLoser 1s forwards;
+}
+
+.animate-rock-beats-scissors.computer-win .computer-move {
+    animation: rockBeatsScissorsWinner 1s forwards;
+}
+
+.animate-rock-beats-scissors.computer-win .player-move {
+    animation: rockBeatsScissorsLoser 1s forwards;
+}
+
+/* For Paper Beats Rock */
+.animate-paper-beats-rock:not(.computer-win) .player-move {
+    animation: paperWrapsRockWinner 1s forwards;
+}
+
+.animate-paper-beats-rock:not(.computer-win) .computer-move {
+    animation: paperWrapsRockLoser 1s forwards;
+}
+
+.animate-paper-beats-rock.computer-win .computer-move {
+    animation: paperWrapsRockWinner 1s forwards;
+}
+
+.animate-paper-beats-rock.computer-win .player-move {
+    animation: paperWrapsRockLoser 1s forwards;
+}
+
+/* For Scissors Beats Paper */
+.animate-scissors-beats-paper:not(.computer-win) .player-move {
+    animation: scissorsCutPaperWinner 1s forwards;
+}
+
+.animate-scissors-beats-paper:not(.computer-win) .computer-move {
+    animation: scissorsCutPaperLoser 1s forwards;
+}
+
+.animate-scissors-beats-paper.computer-win .computer-move {
+    animation: scissorsCutPaperWinner 1s forwards;
+}
+
+.animate-scissors-beats-paper.computer-win .player-move {
+    animation: scissorsCutPaperLoser 1s forwards;
+}
