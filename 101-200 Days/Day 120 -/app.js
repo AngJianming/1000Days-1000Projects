@@ -1,6 +1,14 @@
-console.log(true && false);
-console.log(0.2 >= 0 && 0.2 < 1 / 3);
-console.log(0.2 >= 0 && 0.2 < 1 / 3);
+if (0) {
+    console.log('truthy');
+}
 
-console.log(true || false);
-console.log(!true);
+const cartQuantity = 5;
+
+if (cartQuantity) {
+    console.log('cart has products');
+
+}
+
+console.log(!0);
+
+console.log 
