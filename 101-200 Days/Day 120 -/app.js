@@ -67,6 +67,3 @@ console.log(typeof document.body)
 
 console.log(document.body.innerHTML);
 
-console.log(document.body.innerText);
-console.log(document.body.innerText.length);
-console.log(document.body.innerTest[0]);
