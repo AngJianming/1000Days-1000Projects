@@ -1,69 +1,73 @@
-// if (0) {
-//     console.log('truthy');
-// }
+const cryptoContainer = document.getElementById('crypto-container');
+const searchInput = document.getElementById('search-input');
+const currencySelect = document.getElementById('currency-select');
+const toggleModeBtn = document.getElementById('toggle-mode');
+const errorMessageDiv = document.getElementById('error-message');
 
-// const cartQuantity = 5;
+let cryptoData = [];
 
-// if (cartQuantity) {
-//     console.log('cart has products');
+// Fetch crypto data from CoinGecko API with error handling
+async function fetchCryptoData() {
+    const currency = currencySelect.value;
+    const apiUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=50&page=1&sparkline=false`;
 
-// }
-
-// console.log(!0);
-
-// console.log('text' / 5);
-
-// let variable1 = underfined;
-// console.log(variable1);
-
-/*
-
-const result = 0 ? 'truthy' : 'falsy' // short cut to the above if truthy value
-
-console.log(result);
-
-false && console.log('hello'); // use the value to the left to block the msg value
-
-const message = faluse && 'hello';
-console.log(message);
-
-const currency = underfined || 'USD';
-console.log(currency);
-
-*/
-
-// function function1() {
-//     console.log('hello');
-//     console.log(2+2);
-// }
-
-// function1(); // calling the function duhhh
-
-// function pickComputerMouse() {
-    
-// }
-
-/*
-function calculateTax(cost, taxPercent = 0.1) {
-    console.log(cost * taxPercent);
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error('API response not ok');
+        }
+        const data = await response.json();
+        cryptoData = data;
+        displayCryptos(cryptoData);
+        errorMessageDiv.textContent = '';
+    } catch (error) {
+        console.error('Error fetching crypto data:', error);
+        errorMessageDiv.textContent = 'Error fetching data. Please try again later.';
+    }
 }
 
-calculateTax(2000, 0.2);
+// Display crypto cards based on data and search filter
+function displayCryptos(data) {
+    cryptoContainer.innerHTML = '';
 
-calculateTax(5000);
-*/
+    const searchTerm = searchInput.value.toLowerCase();
+    const filteredData = data.filter(
+        coin =>
+            coin.name.toLowerCase().includes(searchTerm) ||
+            coin.symbol.toLowerCase().includes(searchTerm)
+    );
 
-// DOM
-/*
-document.body.innerHTML = 'hello'; 
-document.title = 'Good job!';
-*/
+    filteredData.forEach(coin => {
+        const card = document.createElement('div');
+        card.classList.add('crypto-card');
 
-console.log(document.title);
-document.title = 'Changed';
+        const priceChangeClass =
+            coin.price_change_percentage_24h >= 0 ? 'green' : 'red';
 
-console.log(document.body);
-console.log(typeof document.body)
+        card.innerHTML = `
+      <img src="${coin.image}" alt="${coin.name}" width="50">
+      <h2>${coin.name} (${coin.symbol.toUpperCase()})</h2>
+      <p>Price: ${currencySelect.value.toUpperCase()} ${coin.current_price.toFixed(2)}</p>
+      <p class="${priceChangeClass}">24h Change: ${coin.price_change_percentage_24h.toFixed(2)}%</p>
+    `;
+        cryptoContainer.appendChild(card);
+    });
+}
 
-console.log(document.body.innerHTML);
+// Event listeners for interactive features
+searchInput.addEventListener('input', () => {
+    displayCryptos(cryptoData);
+});
 
+currencySelect.addEventListener('change', () => {
+    fetchCryptoData();
+});
+
+toggleModeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    document.body.classList.toggle('dark-mode');
+});
+
+// Initial fetch and update every 30 seconds
+fetchCryptoData();
+setInterval(fetchCryptoData, 30000);

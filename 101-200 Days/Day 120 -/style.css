@@ -1,0 +1,105 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #1e1e1e;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+.controls input,
+.controls select,
+.controls button {
+    padding: 8px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.controls input:focus,
+.controls select:focus,
+.controls button:focus {
+    outline: none;
+    transform: scale(1.05);
+}
+
+/* Container for crypto cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Crypto card styling with fade in animation */
+.crypto-card {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.crypto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.green {
+    color: #00ff00;
+}
+
+.red {
+    color: #ff0000;
+}
+
+#error-message {
+    text-align: center;
+    color: #ff5555;
+    margin-top: 20px;
+}
+
+/* Light mode styling */
+.light-mode {
+    background-color: #f0f0f0;
+    color: #121212;
+}
+
+.light-mode header {
+    background-color: #e0e0e0;
+}
+
+.light-mode .crypto-card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade-in animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
